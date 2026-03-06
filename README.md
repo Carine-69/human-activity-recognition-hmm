@@ -25,23 +25,44 @@ the most likely hidden state sequence for each test recording.
 
 ## Folder Structure
 ```
-human-activity-recognition-hmm/
-  data/
-    raw/
-      jumping/
-      standing/
-      walking/
-      still/
-    processed/
-      features_normalized.csv
-  models/
-    hmm_models.pkl
-    scaler.pkl
-    label_encoder.pkl
-  figures/
-  notebooks/
-    hmm_activity_recognition.ipynb
-```
+HMM-Human-Activity-Recognition/
+│
+├── data/
+│   ├── raw/
+│   │   ├── jumping/        ← zip recordings (Person 1)
+│   │   ├── still/          ← zip recordings (Person 1)
+│   │   ├── walking/        ← zip recordings (Person 2)
+│   │   └── standing/       ← zip recordings (Person 2)
+│   └── processed/
+│       └── features_normalized.csv
+│
+├── notebooks/
+│   └── activity_recognition_hmm.ipynb
+│
+├── models/
+│   ├── hmm_models.pkl
+│   ├── scaler.pkl
+│   └── label_encoder.pkl
+│
+├── figures/
+│   ├── raw_signals.png
+│   ├── fft_per_activity.png
+│   ├── baum_welch_convergence.png
+│   ├── transition_matrices.png
+│   ├── initial_state_distribution.png
+│   ├── emission_means_heatmap.png
+│   ├── emission_covariance_heatmap.png
+│   ├── confusion_matrix.png
+│   ├── sensitivity_specificity.png
+│   ├── decoded_sequence.png
+│   ├── viterbi_state_paths.png
+│   └── score_distribution.png
+│
+├── report/
+│   └── HMM_Activity_Recognition_Report.pdf
+│
+├── requirements.txt
+└── README.md
 
 ## Requirements
 ```
@@ -52,3 +73,4 @@ pip install numpy pandas matplotlib seaborn scikit-learn hmmlearn scipy
 1. Clone the repo
 2. Add your zip files to the correct folder under `data/raw/`
 3. Open and run `hmm_activity_recognition.ipynb` top to bottom
+
