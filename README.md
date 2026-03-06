@@ -70,7 +70,8 @@ pip install numpy pandas matplotlib seaborn scikit-learn hmmlearn scipy
 ```
 
 ## How to run
-1. Clone the repo
-2. Add your zip files to the correct folder under `data/raw/`
-3. Open and run `hmm_activity_recognition.ipynb` top to bottom
+1. git clone https://github.com/Carine-69/human-activity-recognition-hmm.git
+2. pip install -r requirements.txt
+3. Add your zip files to the correct folder under `data/raw/`
+4. Open and run `notebooks/activity_recognition_hmm.ipynb` top to bottom
 
